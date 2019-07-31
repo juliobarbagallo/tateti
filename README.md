@@ -1,8 +1,8 @@
 # Ta-Te-Ti
 Python ta-te-ti board game.
-Play:
+Play
     To run it, from the terminal: (base) jbarbaga@M1:~/codes/python/nb$ python tateti.py 
-Tests:
+Tests
     (base) jbarbaga@M1:~/codes/python/nb$ python first_test.py
 
     El repositorio debe tener un archivo readme con las instrucciones de como iniciarlo y comentarios de lo que creas que haya sido desafiante al desarrollarlo.
