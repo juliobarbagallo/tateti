@@ -122,7 +122,7 @@ def main():
     print('Ta-Te-Ti')
     print_board(board)
 
-    player_turn = randrange(2)
+    player_turn = randrange(2)  # Random between 0 and 1 to see who starts the game.
 
     while not is_board_full(board):
         if player_turn == 0:
@@ -151,8 +151,8 @@ def main():
                 print('You won this time! Good Job!')
                 break
 
-    # if is_board_full(board):
-    #     print('Tie Game!')
+    if is_board_full(board):
+        print('Tie Game!')
 
 
 if __name__ == '__main__':
