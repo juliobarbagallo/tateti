@@ -1,4 +1,5 @@
 import random
+from os import system, name
 
 # We start creating the board, it will be a list of 9 positions. It starts with all blanks ' '.
 board = [' ' for x in range(10)]
@@ -114,6 +115,16 @@ def is_board_full(board):
     return True
 
 
+def clear():
+    """ Define our clear function"""
+
+    if name == 'nt':  # for windows
+        _ = system('cls')
+
+    else:   # for mac and linux(here, os.name is 'posix')
+        _ = system('clear')
+
+
 def main():
     """This is the main function, which will call each functions
     in order to play the game. It also got the logic for the
@@ -128,6 +139,7 @@ def main():
         if player_turn == 0:
             if not is_winner(board, 'O'):
                 player_move()
+                clear()
                 print_board(board)
             else:
                 print('Sorry, computer won this time!')
@@ -137,6 +149,7 @@ def main():
 
         if not is_winner(board, 'X'):
             move = machine_move()
+            clear()
             if not move == 0:
             #     print('Tie Game!')
             # else:
